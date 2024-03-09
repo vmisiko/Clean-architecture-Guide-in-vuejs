@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary-red: #FF0000;
+    --checkbox-color: #FF0000;
+    --checkbox-tick-color: white;
+
+}
+  
+  /* Hide the default checkbox appearance */
+  .custom-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid;
+    border-radius: 3px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  /* Style the custom checkbox when it's checked */
+  .custom-checkbox:checked {
+    border-color: var(--checkbox-color);
+    background-color: var(--checkbox-color);
+  }
+  
+  /* Create the tick mark using ::before pseudo-element */
+  .custom-checkbox:checked::before {
+    content: '\2713'; /* Unicode code for a tick mark */
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--checkbox-tick-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  

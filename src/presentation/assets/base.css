@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav {
+    @apply flex flex-row items-center space-x-0.5 rounded-md px-1 py-2 text-sm text-secondaryText
+    hover:animate-pulse hover:bg-accent hover:text-accentText xl:space-x-2 xl:text-base xl:font-semibold 
+    2xl:px-4;
+  }
+  .nav-active {
+    @apply bg-accent text-accentText;
+  }
+  .scrollbar-w-2::-webkit-scrollbar {
+    width: 0.25rem;
+    height: 0.25rem;
+  }
+  .scrollbar-w-0::-webkit-scrollbar {
+    width: 0rem;
+    height: 0rem;
+  }
+  html::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  html::-webkit-scrollbar {
+    width: 0rem;
+    height: 0rem;
+  }
+  .scrollbar-track-blue-lighter::-webkit-scrollbar-track,
+  html::-webkit-scrollbar-track {
+    --bg-opacity: 1;
+    @apply bg-secondaryBg;
+  }
+
+  .scrollbar-thumb-blue::-webkit-scrollbar-thumb html::-webkit-scrollbar-thumb {
+    --bg-opacity: 1;
+    @apply bg-secondaryBg;
+  }
+  .scrollbar-thumb-h-blue::-webkit-scrollbar-thumb {
+    --bg-opacity: 1;
+    @apply bg-secondaryBg;
+  }
+
+  .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+    border-radius: 0.25rem;
+  }
+  .active-item {
+    @apply border-accent bg-accent/5;
+  }
+  .toggle-checkbox:checked {
+    @apply: right-0 border-green-400;
+    right: 0;
+    border-color: #68d391;
+  }
+  .toggle-checkbox:checked + .toggle-label {
+    @apply: bg-green-400;
+    background-color: #68d391;
+  }
+
+  html,
+  p,
+  div,
+  span {
+    white-space: pre-line;
+  }
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+  :root {
+    --primary-bg: 246, 245, 248;
+    --secondary-bg: 254, 254, 254;
+    --accent: 0, 136, 204;
+    --primary-text: 0, 0, 0;
+    --secondary-text: 157, 157, 157;
+    --accent-text: 246, 245, 248;
+  }
+  [data-theme='dark'] {
+    --primary-bg: 34, 37, 47;
+    --secondary-bg: 42, 45, 55;
+    --accent: 0, 136, 204;
+    --primary-text: 246, 245, 248;
+    --secondary-text: 157, 157, 157;
+    --accent-text: 246, 245, 248;
+  }
+  [data-theme='material-dark'] {
+    --primary-bg: 23, 33, 49;
+    --secondary-bg: 34, 52, 76;
+    --accent: 0, 136, 204;
+    --primary-text: 161, 173, 193;
+    --secondary-text: 157, 157, 157;
+    --accent-text: 246, 245, 248;
+  }
+  [data-theme='light-purple'] {
+    --primary-bg: 230, 216, 255;
+    --secondary-bg: 223, 206, 255;
+    --accent: 0, 136, 204;
+    --primary-text: 0, 0, 0;
+    --secondary-text: 80, 83, 136;
+    --accent-text: 246, 245, 248;
+  }
+  [data-theme='hot-pink'] {
+    --primary-bg: 255, 186, 223;
+    --secondary-bg: 251, 179, 224;
+    --accent: 0, 136, 204;
+    --primary-text: 8, 6, 70;
+    --secondary-text: 80, 83, 136;
+    --accent-text: 246, 245, 248;
+  }
+  [data-theme='muted-green'] {
+    --primary-bg: 180, 192, 173;
+    --secondary-bg: 173, 185, 166;
+    --accent: 0, 129, 167;
+    --primary-text: 56, 50, 56;
+    --secondary-text: 80, 89, 107;
+    --accent-text: 246, 245, 248;
+  }
+  [data-theme='muted-grey'] {
+    --primary-bg: 237, 236, 235;
+    --secondary-bg: 211, 211, 211;
+    --accent: 0, 129, 167;
+    --primary-text: 56, 50, 56;
+    --secondary-text: 134, 134, 134;
+    --accent-text: 246, 245, 248;
+  }
+  [data-theme='grey'] {
+    --primary-bg: 204, 211, 217;
+    --secondary-bg: 193, 202, 209;
+    --accent: 0, 129, 167;
+    --primary-text: 56, 50, 56;
+    --secondary-text: 134, 134, 134;
+    --accent-text: 246, 245, 248;
+  }
+  [data-theme='muted-yellow'] {
+    --primary-bg: 255, 255, 191;
+    --secondary-bg: 245, 245, 189;
+    --accent: 0, 129, 167;
+    --primary-text: 56, 50, 56;
+    --secondary-text: 134, 134, 134;
+    --accent-text: 246, 245, 248;
+  }
+  [data-theme='muted-pink'] {
+    --primary-bg: 254, 206, 233;
+    --secondary-bg: 249, 201, 228;
+    --accent: 74, 142, 197;
+    --primary-text: 56, 50, 56;
+    --secondary-text: 96, 105, 123;
+    --accent-text: 246, 245, 248;
+  }
+  [data-theme='muted-blue-green'] {
+    --primary-bg: 202, 231, 232;
+    --secondary-bg: 195, 224, 225;
+    --accent: 0, 129, 167;
+    --primary-text: 56, 50, 56;
+    --secondary-text: 96, 105, 123;
+    --accent-text: 246, 245, 248;
+  }
+}
+
+.react-pdf__Page {
+  margin-bottom: 1rem;
+}
+
+.scroll-shadows {
+  --bgRGB: 73, 89, 99;
+  --bg: rgb(var(--bgRGB));
+  --bgTrans: rgba(var(--bgRGB), 0);
+
+  --shadow: rgba(41, 50, 56, 0.5);
+
+  overflow: auto;
+
+  background:
+    /* Shadow Cover TOP */ linear-gradient(
+        var(--bg) 30%,
+        var(--bgTrans)
+      )
+      center top,
+    linear-gradient(var(--bgTrans), var(--bg) 70%) center bottom,
+    /* Shadow TOP */
+      radial-gradient(farthest-side at 50% 0, var(--shadow), rgba(0, 0, 0, 0))
+      center top,
+    /* Shadow BOTTOM */
+      radial-gradient(
+        farthest-side at 50% 100%,
+        var(--shadow),
+        rgba(0, 0, 0, 0)
+      )
+      center bottom;
+
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+}
+
+.scroll-shadows {
+  --bgRGB: 73, 89, 99;
+  --bg: rgb(var(--bgRGB));
+  --bgTrans: rgba(var(--bgRGB), 0);
+  --shadow: rgba(41, 50, 56, 0.5);
+
+  overflow: auto;
+
+  background:
+    /* Shadow Cover TOP */ linear-gradient(
+        var(--bg) 30%,
+        var(--bgTrans)
+      )
+      center top,
+    /* Shadow Cover BOTTOM */ linear-gradient(var(--bgTrans), var(--bg) 70%)
+      center bottom,
+    /* Shadow TOP */
+      radial-gradient(farthest-side at 50% 0, var(--shadow), rgba(0, 0, 0, 0))
+      center top,
+    /* Shadow BOTTOM */
+      radial-gradient(
+        farthest-side at 50% 100%,
+        var(--shadow),
+        rgba(0, 0, 0, 0)
+      )
+      center bottom;
+
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  display: block;
+  background-repeat: no-repeat;
+  border-width: thin;
+}
+input[type='date']::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 5%;
+}
+input::-webkit-datetime-edit-fields-wrapper {
+  position: relative;
+  left: 10%;
+}
+input::-webkit-datetime-edit {
+  position: relative;
+  left: 10%;
+}

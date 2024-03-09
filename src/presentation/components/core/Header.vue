@@ -1,7 +1,7 @@
 <template>
     <div class="px-5 py-2 shadow-lg flex justify-between fixed top-0 left-0 right-0 z-10 bg-white">
         <div>
-            <img height="88" src="../../assets/logo.svg" alt="">
+            <img height="50px" width="50px" src="../../assets/logo.png" alt="">
         </div>
 
         <div class="flex space-x-3 ">
